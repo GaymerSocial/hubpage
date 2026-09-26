@@ -2,6 +2,15 @@
 
 All notable changes to this repo are documented here.
 
+## v2.1.8
+
+### Added
+- GitHub Actions CI (`.github/workflows/ci.yml`) checking on every push and pull request against `main` that the key repo files exist, local links resolve, workflow YAML is valid, and `VERSION.md` has a matching `CHANGELOG.md` release heading
+- Release workflow (`.github/workflows/release.yml`) that publishes a GitHub Release whenever `commit.sh`'s `vX.Y.Z` tag is pushed, using the matching `CHANGELOG.md` section as the notes
+
+### Changed
+- CHANGELOG sections reordered to Added, Changed, Fixed, Removed, Security, Deprecated
+
 ## v2.1.7
 
 ### Fixed
@@ -44,6 +53,9 @@ All notable changes to this repo are documented here.
 
 ## v2.0.0
 
+### Added
+- `assets/logo.png`/`assets/icon.png` — the real Gaymer.Social logo/icon, vendored locally for the favicon and README header (replaces the earlier external hotlink)
+
 ### Changed
 - Redirect target changed from `about.gaymer.social` to `https://gaymer.social/`, following Gaymer.Social's discontinuation in September 2026 (rising costs and the loss of infrastructure in the NorthC data centre fire)
 - Entire Jekyll site removed — `index.md`, `coc.md`, `contact.md`, `support.md`, `team.md`, `about.md`, `404.md`, the `/legal` hub + sub-pages, `_layouts`, `_includes`, `_data`, `_posts`, `_drafts`, `Gemfile`(`.lock`), `_config.yml`, `_config.dev.yml`, and `assets/` are all gone
@@ -52,9 +64,6 @@ All notable changes to this repo are documented here.
 
 ### Removed
 - All community content pages and the `/legal` sub-pages (moot once every request redirects away before rendering)
-
-### Added
-- `assets/logo.png`/`assets/icon.png` — the real Gaymer.Social logo/icon, vendored locally for the favicon and README header (replaces the earlier external hotlink)
 
 ## v1.0.0
 
