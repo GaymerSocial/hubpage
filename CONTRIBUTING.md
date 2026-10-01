@@ -17,6 +17,7 @@ Plain static HTML, no build step, no dependencies. See `dev-server.sh` (bash) / 
 - `index.html` and `404.html` hold identical redirect/notice content — keep them in sync if you edit either
 - `_redirects` is the Netlify catch-all (`/* https://gaymer.social/ 301`) sending every legacy URL to the main notice; `404.html` is the fallback for hosts that only support redirects via a custom 404 page
 - The dev-mode banner is a client-side check (inline script in `index.html`/`404.html`) for `localhost`/`127.0.0.1` — append `?nodev=1` to preview production behavior
+- This site is a redirect shell, so it has no sitemap; the redirect is a script in `index.html`/`404.html` (skipped on localhost so the dev banner shows) with a `<noscript>` meta refresh as fallback
 
 ## Versioning and changelog
 
